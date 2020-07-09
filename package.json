@@ -1,0 +1,29 @@
+{
+  "name": "mern-boilerplate",
+  "version": "1.0.0",
+  "description": "Used to kickstart future development.",
+  "main": "start.js",
+  "scripts": {
+    "start": "nodemon start.js",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidshur/mern-boilerplate.git"
+  },
+  "author": "David Shur",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidshur/mern-boilerplate/issues"
+  },
+  "homepage": "https://github.com/davidshur/mern-boilerplate#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jest": "^26.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
+  }
+}
