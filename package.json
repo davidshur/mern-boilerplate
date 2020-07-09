@@ -5,6 +5,7 @@
   "main": "start.js",
   "scripts": {
     "start": "nodemon start.js",
+    "prod": "node start.js",
     "test": "jest",
     "test:watch": "jest --watch"
   },
