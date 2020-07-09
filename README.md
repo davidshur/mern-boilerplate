@@ -1,6 +1,6 @@
 # mern-boilerplate
 
-This is a boilerplate MERN application. MERN stands for MongoDB, Express, React, Node. Use this project as a template to kick start your full-stack project.
+This is a boilerplate MERN application. Use this project as a template to kick start your full-stack project.
 
 ## Getting Started
 
