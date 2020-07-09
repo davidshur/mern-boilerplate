@@ -1,3 +1,4 @@
+// TODO(David): Add tests to mongoose!
 const mongoose = require('mongoose');
 require('dotenv').config();
 
