@@ -32,10 +32,12 @@ heroku -v
 ### Installing
 
 After cloning, create a .env file in the root directory to house the mongoDB
-URI, I used mLab as my database host. The environment variable should look like
+URI, as well as a bug-fixing script. I used mLab as my database host. The
+environment variable should look like
 
 ```
 MONGODB_URI=<your_uri_here>
+SKIP_PREFLIGHT_CHECK=true
 ```
 
 Then, install the npm packages in root and in client
