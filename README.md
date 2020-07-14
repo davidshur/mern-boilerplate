@@ -32,11 +32,17 @@ heroku -v
 ### Installing
 
 After cloning, create a .env file in the root directory to house the mongoDB
-URI, as well as a bug-fixing script. I used mLab as my database host. The
-environment variable should look like
+URI. I used mLab as my database host. The environment variable should look like
 
 ```
 MONGODB_URI=<your_uri_here>
+```
+
+After that, make a .env file in the client directory and add the following line.
+This will allow the client to run despite a Jest version mismatch between root
+and client.
+
+```
 SKIP_PREFLIGHT_CHECK=true
 ```
 
