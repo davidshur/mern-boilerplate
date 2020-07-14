@@ -109,6 +109,12 @@ put
 MONGODB_URI=mongodb://<username>:<password>@<your_mongo_db_uri_info>
 ```
 
+In the Heroku App Settings, create a new ENV variable and set it to
+
+```
+SKIP_PREFLIGHT_CHECK=true
+```
+
 Then deploy to the live server with
 
 ```
