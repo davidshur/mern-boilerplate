@@ -7,6 +7,7 @@
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:dev": "concurrently \"nodemon start.js\" \"cd client && npm start\"",
     "start:prod": "node start.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "test": "jest",
     "test:watch": "jest --watch"
   },
@@ -25,7 +26,8 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "if-env": "^1.0.4",
-    "mongoose": "^5.9.22"
+    "mongoose": "^5.9.22",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
