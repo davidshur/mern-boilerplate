@@ -1,60 +1,113 @@
 # mern-boilerplate
 
-This is a boilerplate MERN application. Use this project as a template to kick start your full-stack project.
+This is a boilerplate MERN application. Use this project as a template to kick
+start your full-stack project.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your
+local machine for development and testing purposes. See deployment for notes on
+how to deploy the project on a live system.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+You will need to install node, visit their website at
+[NodeJS](https://nodejs.org/en/download/).
+
+You will need to install the Heroku CLI. On Mac
 
 ```
-Give examples
+brew tap heroku/brew && brew install heroku
+```
+
+For other systems refer to the official docs at
+[Heroku](https://devcenter.heroku.com/articles/heroku-cli).
+
+To check that these are installed run
+
+```
+node -v
+npm -v
+heroku -v
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
+After cloning, create a .env file in the root directory to house the mongoDB
+URI, I used mLab as my database host. The environment variable should look like
 
 ```
-until finished
+MONGODB_URI=<your_uri_here>
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+Then, install the npm packages in root and in client
+
+```
+npm i
+cd client
+npm i
+```
+
+Start the server
+
+```
+npm start
+```
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+To run tests, simply do
+
+```
+npm run test
+```
+
+To run tests continuously, do
+
+```
+npm run test:watch
+```
 
 ### Break down into end to end tests
 
-Explain what these tests test and why
+Tests check API endpoints.
 
 ```
-Give an example
+it('gets / endpoint', async done => {
+  const res = await request.get('/');
+
+  expect(res.status).toBe(200);
+  expect(res.body.message).toBe('Hello world!');
+  done();
+});
 ```
 
 ### And coding style tests
 
-Explain what these tests test and why
-
-```
-Give an example
-```
+Currently there are no coding style tests.
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+To deploy on a live website, this project used Heroku. In terminal
+
+```
+heroku login
+heroku create
+```
+
+At this point, go into the Heroku settings for the branch you have created and
+add MongoDB mLab as an add on. Make a .env file in the root directory and in it
+put
+
+```
+MONGODB_URI=mongodb://<username>:<password>@<your_mongo_db_uri_info>
+```
+
+Then deploy to the live server with
+
+```
+git push heroku master
+```
 
 ## Built With
 
@@ -67,11 +120,13 @@ Add additional notes about how to deploy this on a live system
 
 - **David Shur** - _Initial work_ - [David Shur](https://github.com/davidshur)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the [contributors](https://github.com/your/project/contributors) who
+participated in this project.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see [LICENSE.md](LICENSE.md)
+file for details
 
 ## Acknowledgments
 
