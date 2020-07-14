@@ -14,14 +14,12 @@ how to deploy the project on a live system.
 You will need to install node, visit their website at
 [NodeJS](https://nodejs.org/en/download/).
 
-You will need to install the Heroku CLI. On Mac
+You will need to install the Heroku CLI. For other systems refer to the official
+docs at [Heroku](https://devcenter.heroku.com/articles/heroku-cli). On Mac
 
 ```
 brew tap heroku/brew && brew install heroku
 ```
-
-For other systems refer to the official docs at
-[Heroku](https://devcenter.heroku.com/articles/heroku-cli).
 
 To check that these are installed run
 
