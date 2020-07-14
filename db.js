@@ -12,4 +12,4 @@ const dbConnect = () => {
     .catch(err => console.log(err));
 };
 
-module.exports = dbConnect;
+module.exports = { connect: dbConnect };
